@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DL.Entities
+namespace Core.Entities
 {
-    public class User_Answer : BaseEntity
+    public class UserAnswer : BaseEntity
     {
-        public int User_Id { get; set; }
-        public int Answer_Options_Id { get; set; }
+        public int UserId { get; set; }
+        public int AnswerOptionsId { get; set; }
         public DateTime Date { get; set; }
     }
 }
