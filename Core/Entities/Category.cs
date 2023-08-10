@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DL.Entities
+namespace Core.Entities
 {
-    public class Like:BaseEntity
+    public class Category : BaseEntity
     {
-        public int User_Id { get; set; }
-        public int Quiz_Id { get; set; }
 
+        public string Name { get; set; }
     }
 }
