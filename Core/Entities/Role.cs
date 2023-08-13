@@ -9,5 +9,8 @@ namespace Core.Entities
     public class Role : BaseEntity
     {
         public string Name { get; set; }
+
+        //navigation property
+        public ICollection<User> User { get; set; }
     }
 }
