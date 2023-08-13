@@ -8,8 +8,15 @@ namespace Core.Entities
 {
     public class AnswerOptions : BaseEntity
     {
-        public int QuestionId { get; set; }
         public string AnswerText { get; set; }
         public bool IsCorrect { get; set; }
+
+        //navigation property(quetion-answerOptions)
+        public int QuestionId { get; set; }
+        public Question Question { get; set; }
+
+        //navigation property(answerOptions-userAnswer)
+        public ICollection<UserAnswer> Answers { get; set; }
+
     }
 }
