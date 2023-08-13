@@ -11,8 +11,6 @@ namespace Core.Entities
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-<<<<<<< HEAD
-=======
        
         //navigation property( user-role)
         public int RoleId { get; set; }
@@ -26,6 +24,5 @@ namespace Core.Entities
 
         //navigation property(user-userAnswer)
         public ICollection<UserAnswer> UserAnswer { get; set; }
->>>>>>> 1ae529f6d7d64a97c793cd8d94eb38579e3efe6a
     }
 }

@@ -8,11 +8,6 @@ namespace Core.Entities
 {
     public class UserAnswer : BaseEntity
     {
-<<<<<<< HEAD
-        public int UserId { get; set; }
-        public int AnswerOptionsId { get; set; }
-        public DateTime Date { get; set; }
-=======
         public DateTime Date { get; set; }
 
         //navigation property(user-userAnswer)
@@ -22,6 +17,5 @@ namespace Core.Entities
         //navigation property(answerOptions-userAnswer)
         public int AnswerOptionsId { get; set; }
         public AnswerOptions AnswerOptions { get; set; }
->>>>>>> 1ae529f6d7d64a97c793cd8d94eb38579e3efe6a
     }
 }
