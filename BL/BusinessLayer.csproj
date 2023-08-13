@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="DTO\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 
 </Project>
