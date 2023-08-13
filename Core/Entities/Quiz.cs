@@ -8,12 +8,6 @@ namespace Core.Entities
 {
     public class Quiz : BaseEntity
     {
-<<<<<<< HEAD
-        public int UserId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int CategoryId { get; set; }
-=======
         public string Name { get; set; }
         public string Description { get; set; }
 
@@ -31,6 +25,5 @@ namespace Core.Entities
         //navigation property(quetion-quiz)
         public ICollection<Question> Question { get; set; }
 
->>>>>>> 1ae529f6d7d64a97c793cd8d94eb38579e3efe6a
     }
 }
