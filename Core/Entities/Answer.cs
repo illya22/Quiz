@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Answer : BaseEntity
+    public class Answer : BaseEntity<int>
     {
         public string Content { get; set; } = string.Empty;
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class ApplicationUser : IdentityUser
+    public class ApplicationUser : IdentityUser<int>
     {
         public virtual IEnumerable<Quiz> CreatedQuizzes { get; set; }
 

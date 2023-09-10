@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class ApplicationUserQuiz  
+    public class ApplicationUserQuiz:BaseEntity<int>
     {
         public int CompletedQuizzesId { get; set; }
 
