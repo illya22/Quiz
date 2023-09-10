@@ -1,20 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Question : BaseEntity
+    public class Question:BaseEntity<int>
     {
-        public string QuestionText { get; set; }
+        public string Content { get; set; } = string.Empty;
 
-        //navigation property(quetion-quiz)
+        public IEnumerable<Answer> Options { get; set; }
+
         public int QuizId { get; set; }
-        public Quiz Quiz { get; set; }
 
-        //navigation property(quetion-answerOptions)
-        public ICollection<AnswerOptions> Options { get; set; }
+        [ForeignKey(nameof(QuizId))]
+        public virtual Quiz? Quiz { get; set; }
+
+        public Question()
+        {
+            Options = new List<Answer>();
+        }
     }
 }

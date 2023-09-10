@@ -1,29 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Quiz : BaseEntity
+    public class Quiz:BaseEntity<int>
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Title { get; set; } = string.Empty;
 
-        //navigation property( user-quiz)
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public string Description { get; set; } = "no descripion";
 
-        //navigation property(quiz-like)
-        public ICollection<Like> Like { get; set; }
+        public int Passed { get; set; } = 0;
 
-        //navigation property(quiz-category)
-        public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public int CreatorId { get; set; }
 
-        //navigation property(quetion-quiz)
-        public ICollection<Question> Question { get; set; }
+        [ForeignKey(nameof(CreatorId))]
+        public virtual ApplicationUser? Creator { get; set; }
 
+        public IEnumerable<ApplicationUserQuiz>? CompletedUsers { get; set; }
+
+        public IEnumerable<Question>? Questions { get; set; }
+
+        public Quiz()
+        {
+            Questions = new List<Question>();
+            CompletedUsers = new List<ApplicationUserQuiz>();
+        }
     }
 }
