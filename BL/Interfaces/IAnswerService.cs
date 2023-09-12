@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Interfaces
 {
-    public interface IUserAnswerService
+    public interface IAnswerService
     {
-        UserAnswerDTO GetByIdAsync(int id);
-        void CreateAsync (UserAnswerDTO userAnswerDTO);
+         Task<IEnumerable<AnswerDTO>> GetAnswersByQuizIdAsync(int quizId);
     }
 }

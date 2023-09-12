@@ -9,11 +9,17 @@ namespace BusinessLayer.DTO
     public class QuizDTO
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int UserId { get; set; }
-        public int CategoryId { get; set; }
-        public ICollection<LikeDTO> Likes { get; set; }
-        public ICollection<QuestionDTO> Questions { get; set; }
+
+        public string Title { get; set; } = string.Empty;
+
+        public string Description { get; set; } = string.Empty;
+
+        public int CreatorId { get; set; }
+
+        public UserDTO? Author { get; set; }
+
+        public int Passed { get; set; } = 0;
+
+        public List<QuestionDTO> Questions { get; set; } = new List<QuestionDTO>();
     }
 }

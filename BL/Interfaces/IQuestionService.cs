@@ -9,9 +9,6 @@ namespace BusinessLayer.Interfaces
 {
     public interface IQuestionService
     {
-        QuestionDTO GetByIdAsync(int id);
-        void CreateAsync (QuestionDTO question);
-        void UpdateAsync (QuestionDTO question);
-        void DeleteAsync (int id);
+        Task<IEnumerable<QuestionDTO>> GetQuestionsByQuizIdAsync(int quizId);
     }
 }

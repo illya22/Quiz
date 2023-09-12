@@ -11,6 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentationLayer", "PL\Pre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BL\BusinessLayer.csproj", "{D4C82FD6-8FEE-4B91-BBB6-34BFCDD02DB5}"
 	ProjectSection(ProjectDependencies) = postProject
+		{53C540E1-7273-41E2-AF72-D3CC6F38EAF9} = {53C540E1-7273-41E2-AF72-D3CC6F38EAF9}
 		{F6E2A6DE-6745-4CB5-B41D-B1C043543C2C} = {F6E2A6DE-6745-4CB5-B41D-B1C043543C2C}
 	EndProjectSection
 EndProject
@@ -19,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DL\DataLayer.c
 		{53C540E1-7273-41E2-AF72-D3CC6F38EAF9} = {53C540E1-7273-41E2-AF72-D3CC6F38EAF9}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{53C540E1-7273-41E2-AF72-D3CC6F38EAF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{53C540E1-7273-41E2-AF72-D3CC6F38EAF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

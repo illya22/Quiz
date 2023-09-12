@@ -9,8 +9,11 @@ namespace BusinessLayer.DTO
     public class QuestionDTO
     {
         public int Id { get; set; }
-        public string QuestionText { get; set; }
+
+        public string Content { get; set; } = string.Empty;
+
         public int QuizId { get; set; }
-        public ICollection<AnswerOptionsDTO> Options { get; set; }
+
+        public IEnumerable<AnswerDTO> Options { get; set; } = new List<AnswerDTO>();
     }
 }
