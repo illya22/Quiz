@@ -85,9 +85,9 @@ namespace BusinessLayer.Services
             return userQuizDto;
         }
 
-        public async Task<IEnumerable<UserDTO>> GetUserByPassedQuizAsync(int quizid)
+        public async Task<IEnumerable<UserDTO>> GetUserByPassedQuizAsync(int quizId)
         {
-            var userQuizzes = await _context.UsersQuizzes.Where(x => x.CompletedQuizzesId == quizid).ToListAsync();
+            var userQuizzes = await _context.UsersQuizzes.Where(x => x.CompletedQuizzesId == quizId).ToListAsync();
             List<UserDTO> users = new();
             foreach (var userQuiz in userQuizzes)
                 users.Add(_mapper.Map<UserDTO>(await _context.Users.FirstOrDefaultAsync(x => x.Id == userQuiz.CompletedUsersId)));
